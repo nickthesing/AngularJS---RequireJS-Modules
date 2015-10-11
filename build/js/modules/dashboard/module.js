@@ -27,10 +27,10 @@ function(angular, config, dependencyResolverFor) {
 	        app.factory    = $provide.factory;
 	        app.service    = $provide.service;
 
-			 if ( config )  {
+			if ( config )  {
                 angular.forEach(config.routes, function(route, path) {
                     $routeProvider.when(path, {
-                    	templateUrl:route.templateUrl, 
+                    	templateUrl: route.templateUrl, 
                     	resolve: dependencyResolverFor(route.dependencies)
                     });
                 });

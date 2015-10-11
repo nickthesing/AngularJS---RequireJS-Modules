@@ -8,7 +8,6 @@ var es = require('event-stream');
 
 var errorHandler; 
 
-
 gulp.task('copy', function() {
 
     return es.concat(
@@ -68,32 +67,7 @@ gulp.task('serve', function() {
     });
 });
 
-// gulp.task('js', function() {
-	  
-//   	return gulp.src('app/js/*.js')
-//         .pipe(plumber({errorHandler: onError}))
-//         .pipe(amdOptimize('bootstrap', {
-//         	configFile: 'app/js/require-config.js',
-//         	paths : {
-//     			 'angular': 'bower_components/angular/angular.min',
-//     			 'angular-route': 'bower_components/angular-route/angular-route.min'
-//     			},
-// 			findNestedDependencies: true
-//         }))
-//         .pipe(concat('main-bundle.js'))
-//    	//	.pipe(uglify())
-//     	.pipe(gulp.dest("build"))
-
-// });
-
-// gulp.task('copy', function() {
-//   return gulp
-//     .src('app/js/modules/**/*.js')
-//     .pipe(uglify())
-//     .pipe(gulp.dest('build/modules/'))
-// });
-
-// // Watch task
+// Watch task
 // gulp.task('default', ['browserSync'], function() {
 // 	gulp.watch('app/js/**/*.js', ['js']);
 // });

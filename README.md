@@ -1,20 +1,26 @@
 # AngularJS---RequireJS-Modules
 An AngularJS &amp; RequireJS web app example.
 
-## install 
+### Install 
+
+Installs all the packages 
 
 <pre>
   npm install
   bower install 
 </pre>
 
-## start
+### start
+
+Starts a browsersync webserver on http://localhost:8002
 
 <pre>
-  gulp server
+  gulp serve
 </pre>
 
-## build 
+### build 
+
+Creates a folder /build
 
 <pre> 
   gulp (default)
