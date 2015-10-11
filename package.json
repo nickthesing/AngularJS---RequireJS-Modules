@@ -1,7 +1,7 @@
 {
-  "name": "final",
+  "name": "angularjs-requirejs-modules",
   "version": "0.0.1",
-  "description": "something here",
+  "description": "...",
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -16,7 +16,8 @@
     "gulp-insert": "^0.5.0",
     "gulp-ng-annotate": "^1.1.0",
     "gulp-plumber": "^1.0.1",
-    "method-override": "^2.3.5"
+    "method-override": "^2.3.5",
+    "gulp-uglify": "~1.4.1"
   },
   "devDependencies": {
     "gulp-requirejs": "^0.1.3"

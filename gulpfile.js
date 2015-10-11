@@ -25,6 +25,7 @@ gulp.task('copy', function() {
             .pipe(uglify())
             .pipe(gulp.dest('build/js')),
 
+        // copy all angular module js files
         gulp.src(['source/js/**/*.js', '!source/js/*.js'])
             .pipe(uglify())
             .pipe(gulp.dest('build/js')),      
@@ -59,13 +60,13 @@ gulp.task('js', function() {
 
 gulp.task('default', ['js', 'copy'], function() {});
 
-// gulp.task('browserSync', function() {
-//     browserSync.init({
-//         server: {baseDir: "./source"},
-//         port: 9002,
-//         logLevel: "debug"
-//     });
-// });
+gulp.task('serve', function() {
+    browserSync.init({
+        server: {baseDir: "./source"},
+        port: 9002,
+        logLevel: "debug"
+    });
+});
 
 // gulp.task('js', function() {
 	  
