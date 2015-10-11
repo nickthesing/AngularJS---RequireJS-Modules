@@ -1,0 +1,1 @@
+define(["../module"],function(e){e.controller("homeController",["$scope",function(e){e.title="Homepage"}])});

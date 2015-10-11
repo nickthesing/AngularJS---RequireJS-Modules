@@ -1,0 +1,1 @@
+define(["../module"],function(o){o.controller("loginController",["$scope",function(o){o.title="Login page"}])});

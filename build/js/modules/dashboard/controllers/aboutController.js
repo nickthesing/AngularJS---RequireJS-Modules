@@ -1,0 +1,1 @@
+define(["../module"],function(o){o.controller("aboutController",["$scope",function(o){o.title="About Us"}])});

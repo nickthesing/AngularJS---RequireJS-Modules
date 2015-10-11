@@ -1,0 +1,1 @@
+define(["../module"],function(e){e.directive("customForm",function(){return{replace:!0,restrict:"E",transclude:!0,templateUrl:"views/partials/form.html",link:function(e,t,r){}}})});

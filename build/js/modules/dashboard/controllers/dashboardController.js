@@ -1,0 +1,1 @@
+define(["../module"],function(o){o.controller("dashboardController",["$scope",function(o){}])});
