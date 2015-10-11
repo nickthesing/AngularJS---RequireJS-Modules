@@ -1,1 +1,13 @@
-define(["../module"],function(e){e.controller("homeController",["$scope",function(e){e.title="Homepage"}])});
+
+
+define([
+	'../module'
+], function(module) {
+
+	module.controller('homeController', ['$scope', function($scope) {
+		
+		$scope.title = "Homepage";
+
+	}]);
+
+});

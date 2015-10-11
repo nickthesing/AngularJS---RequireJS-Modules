@@ -1,1 +1,11 @@
-define(["../module"],function(o){o.controller("dashboardController",["$scope",function(o){}])});
+
+
+define([
+	'../module'
+], function(module) {
+
+	module.controller('dashboardController', ['$scope', function($scope) {
+		
+	}]);
+
+});

@@ -1,1 +1,18 @@
-define(["../module"],function(e){e.directive("customForm",function(){return{replace:!0,restrict:"E",transclude:!0,templateUrl:"views/partials/form.html",link:function(e,t,r){}}})});
+
+define([
+	'../module'
+], function(app) {
+
+	app.directive('customForm', function() {
+
+		return {
+			replace: true,
+			restrict: 'E',
+			transclude: true,
+			templateUrl: 'views/partials/form.html',
+			link: function(scope, elements, atts) {}		
+		}
+
+	});
+
+});

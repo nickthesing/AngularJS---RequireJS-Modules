@@ -1,1 +1,47 @@
-define(["angular","./routes","../../dependencyResolverFor","angular-route","../../config"],function(e,r,o){var t=e.module("app.dashboard",["ngRoute"]).config(["$routeProvider","$locationProvider","$controllerProvider","$compileProvider","$filterProvider","$provide",function(i,n,d,l,c,a){t.controller=d.register,t.directive=l.directive,t.filter=c.register,t.factory=a.factory,t.service=a.service,n.html5Mode(!0),r&&e.forEach(r.routes,function(e,r){i.when(r,{templateUrl:e.templateUrl,resolve:o(e.dependencies)})}),r.defaultRoute&&i.otherwise({redirectTo:r.defaultRoute})}]);return t});
+
+define([
+	'angular', 
+	'./routes',
+	'../../dependencyResolverFor',
+	'angular-route',
+	'../../config'
+],
+
+function(angular, config, dependencyResolverFor) {
+
+	var app = angular.module('app.dashboard', ['ngRoute'])
+
+		.config([
+			'$routeProvider',
+	        '$locationProvider',
+	        '$controllerProvider',
+	        '$compileProvider',
+	        '$filterProvider',
+	        '$provide',
+
+		function($routeProvider, $locationProvider, $controllerProvider, $compileProvider, $filterProvider, $provide) {
+
+			app.controller = $controllerProvider.register;
+	        app.directive  = $compileProvider.directive;
+	        app.filter     = $filterProvider.register;
+	        app.factory    = $provide.factory;
+	        app.service    = $provide.service;
+
+			 if ( config )  {
+                angular.forEach(config.routes, function(route, path) {
+                    $routeProvider.when(path, {
+                    	templateUrl:route.templateUrl, 
+                    	resolve: dependencyResolverFor(route.dependencies)
+                    });
+                });
+            }
+
+            if( config.defaultRoute ) {
+                $routeProvider.otherwise({redirectTo:config.defaultRoute});
+            }
+
+		}]);
+	
+	return app;
+
+});

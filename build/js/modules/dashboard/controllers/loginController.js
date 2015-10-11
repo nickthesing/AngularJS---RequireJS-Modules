@@ -1,1 +1,12 @@
-define(["../module"],function(o){o.controller("loginController",["$scope",function(o){o.title="Login page"}])});
+
+define([
+	'../module'
+], function(module) {
+
+	module.controller('loginController', ['$scope', function($scope) {
+		
+		$scope.title = "Login page";
+		
+	}]);
+
+});

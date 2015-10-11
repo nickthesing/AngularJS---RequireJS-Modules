@@ -22,12 +22,12 @@ gulp.task('copy', function() {
         // copy config-require
         gulp.src(['source/js/require-config.js'])
             .pipe(plumber(errorHandler))
-            .pipe(uglify())
+            // .pipe(uglify())
             .pipe(gulp.dest('build/js')),
 
         // copy all angular module js files
-        gulp.src(['source/js/**/*.js', '!source/js/*.js'])
-            .pipe(uglify())
+        gulp.src(['source/js/**/*.js'])
+            // .pipe(uglify())
             .pipe(gulp.dest('build/js')),      
 
         // copy vendor scripts
@@ -54,7 +54,7 @@ gulp.task('js', function() {
         .pipe(concat('bootstrap.js'))
         .pipe(insert.append(';require(["js/bootstrap"]);'))
         .pipe(ngAnnotate())
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('build/js/'))
 });
 
@@ -63,7 +63,7 @@ gulp.task('default', ['js', 'copy'], function() {});
 gulp.task('serve', function() {
     browserSync.init({
         server: {baseDir: "./source"},
-        port: 9002,
+        port: 8002,
         logLevel: "debug"
     });
 });

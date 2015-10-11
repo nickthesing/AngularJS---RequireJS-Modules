@@ -1,1 +1,4 @@
-define(["./module"],function(){});
+
+define([
+	'./module'
+], function() {});
