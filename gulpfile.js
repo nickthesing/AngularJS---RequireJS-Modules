@@ -57,7 +57,9 @@ gulp.task('js', function() {
         .pipe(gulp.dest('build/js/'))
 });
 
-gulp.task('default', ['js', 'copy'], function() {});
+gulp.task('build', ['js', 'copy'], function() {});
+
+gulp.task('default', function() {});
 
 gulp.task('serve', function() {
     browserSync.init({
