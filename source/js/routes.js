@@ -3,7 +3,9 @@ define([], function() {
 
 	return {
 		defaultRoute: '/',
-		routes: {}
+		routes: {
+			
+		}
 	}
 
 });

@@ -12,7 +12,7 @@ function() {
 
 				require(dependencies, function() {
                  	$rootScope.$apply(function() {
-                        deferred.resolve();
+                        defer.resolve();
                    	});
 				});
 
