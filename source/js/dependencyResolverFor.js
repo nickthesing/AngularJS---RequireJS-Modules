@@ -11,7 +11,9 @@ function() {
 				var defer = $q.defer();
 
 				require(dependencies, function() {
-                    defer.resolve();
+                 	$rootScope.$apply(function() {
+                        deferred.resolve();
+                   	});
 				});
 
 				return defer.promise;
