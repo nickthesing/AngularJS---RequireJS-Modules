@@ -7,7 +7,11 @@ define([
 	'./modules/dashboard/module'
 ], function(angular, dependencyResolverFor) {
 
-	var app = angular.module('app', ['ngRoute', 'app.controllers', 'app.services', 'app.constants', 'app.dashboard'])
+	var app = angular.module('app', ['ngRoute', 
+		'app.controllers', 
+		'app.services', 
+		'app.constants', 
+		'app.dashboard'])
 
 		.config(['$locationProvider', function($locationProvider) {
 		

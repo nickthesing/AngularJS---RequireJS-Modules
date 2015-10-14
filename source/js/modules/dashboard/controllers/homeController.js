@@ -1,12 +1,11 @@
 
-
 define([
-	'../module',
+	'../module'
 ], function(module) {
 
-	//module.controller('homeController', ['$scope', 'notificationsService', function($scope, notificationsService) {
-	module.controller('homeController', ['$scope', function($scope) {	
-		$scope.title = "Homepage";
+	module.controller('homeController', ['$scope', 'versionService', function($scope, versionService) {
+
+		$scope.title = "Homepage v" + versionService.version;
 
 	}]);
 

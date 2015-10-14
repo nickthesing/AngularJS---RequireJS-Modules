@@ -1,2 +1,2 @@
 
-define(['./testController'], function () {});
+define(['./baseController'], function () {});

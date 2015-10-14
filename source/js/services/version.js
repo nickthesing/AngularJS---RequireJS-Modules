@@ -3,10 +3,10 @@ define(['./module'], function(services) {
 
 	'use strict';
 
-	services.service('notificationService', [function() {
+	services.service('versionService', [function() {
 
 		return {
-			msg: 'notification version',
+			msg: 'application version',
 			version: '0.1',
 			status: 200,
 			error: false

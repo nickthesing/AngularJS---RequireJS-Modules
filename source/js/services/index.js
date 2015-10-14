@@ -1,2 +1,2 @@
 
-define(['./notification'], function () {});
+define(['./version'], function () {});
