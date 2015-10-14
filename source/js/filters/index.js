@@ -1,0 +1,2 @@
+
+define(['./from-now'], function () {});

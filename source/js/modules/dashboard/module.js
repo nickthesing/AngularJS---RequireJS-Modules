@@ -5,7 +5,8 @@ define([
 	'../../dependencyResolverFor',
 	'angular-route',
 	'../../config',
-	'../../services/version'
+	'../../services/version',
+	//'../../filters/from-now'
 ],
 
 function(angular, config, dependencyResolverFor) {

@@ -7,5 +7,7 @@ define(['./module'], function(controllers) {
 
     	$scope.pageTitle = "AngularJS -- RequireJS - AMD Application - v" + versionService.version;
 
+    	$scope.subTitle = 'subtitle goes here';
+
     }]);
 });

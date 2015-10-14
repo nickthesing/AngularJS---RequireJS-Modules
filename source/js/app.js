@@ -4,12 +4,14 @@ define([
 	'./dependencyResolverFor',
 	'./controllers/index',
 	'./services/index',
+	'./filters/index',
 	'./modules/dashboard/module'
 ], function(angular, dependencyResolverFor) {
 
 	var app = angular.module('app', ['ngRoute', 
 		'app.controllers', 
 		'app.services', 
+		'app.filters', 
 		'app.constants', 
 		'app.dashboard'])
 
