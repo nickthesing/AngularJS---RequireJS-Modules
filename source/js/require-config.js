@@ -9,7 +9,8 @@ define({
 
 	paths: {
 		'angular': 'vendor/angular/angular',
-		'angular-route': 'vendor/angular-route/angular-route.min'	
+		'angular-route': 'vendor/angular-route/angular-route.min',
+		'app': 'js/app'
 	},
 
 	shim: {

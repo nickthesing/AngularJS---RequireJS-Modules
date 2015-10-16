@@ -6,7 +6,6 @@ define([
 	'angular-route',
 	'../../config',
 	'../../services/version',
-	//'../../filters/from-now'
 ],
 
 function(angular, config, dependencyResolverFor) {

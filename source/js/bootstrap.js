@@ -1,7 +1,7 @@
 
 require([
 	'angular', 
-	'./js/app'
+	'app'
 ], function(angular) {
 
 	// bootstrap the application
