@@ -64,7 +64,7 @@ gulp.task('default', function() {});
 gulp.task('serve', function() {
 	browserSync.init({
 		server: {baseDir: "./source"},
-		port: 6000,
+		port: 6002,
 		logLevel: "debug"
 	});
 });
