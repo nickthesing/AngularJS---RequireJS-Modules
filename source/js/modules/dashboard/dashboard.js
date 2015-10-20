@@ -2,7 +2,7 @@
 define([
 	'angular', 
 	'./routes',
-	'../../dependencyResolverFor',
+	'resolver',
 	'angular-route',
 	'../../config',
 	'../../services/version',
@@ -10,7 +10,7 @@ define([
 
 function(angular, config, dependencyResolverFor) {
 
-	var app = angular.module('app.dashboard', ['ngRoute', 'app.services'])
+	var app = angular.module('app.dashboard', ['ngRoute'])
 
 		.config([
 			'$routeProvider',

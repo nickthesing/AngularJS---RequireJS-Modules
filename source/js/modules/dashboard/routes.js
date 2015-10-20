@@ -8,26 +8,27 @@ define([], function() {
 			'/': { 
 				templateUrl: '/views/pages/home.html',
 				dependencies: [
-					'js/modules/dashboard/controllers/homeController'
+					'modules/dashboard/controllers/homeController',
+					'modules/dashboard/controllers/dashboardController'
 				]
 			},
 			'/home': { 
 				templateUrl: '/views/pages/home.html',
 				dependencies: [
-					'js/modules/dashboard/controllers/homeController'
+					'modules/dashboard/controllers/homeController'
 				]
 			},
 			'/about': { 
 				templateUrl: '/views/pages/about.html',
 				dependencies: [
-					'js/modules/dashboard/controllers/aboutController'
+					'modules/dashboard/controllers/aboutController'
 				]
 			},
 			'/login': { 
 				templateUrl: '/views/pages/login.html',
 				dependencies: [
-					'js/modules/dashboard/controllers/loginController',
-					'js/modules/dashboard/directives/custom-form'
+					'modules/dashboard/controllers/loginController',
+					'modules/dashboard/directives/custom-form'
 				]
 			}
 		}

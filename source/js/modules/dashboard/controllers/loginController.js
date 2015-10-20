@@ -1,6 +1,6 @@
 
 define([
-	'../module'
+	'../dashboard'
 ], function(module) {
 
 	module.controller('loginController', ['$scope', function($scope) {

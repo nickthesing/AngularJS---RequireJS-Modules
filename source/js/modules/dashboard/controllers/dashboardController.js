@@ -1,11 +1,9 @@
 
 
 define([
-	'../module'
+	'../dashboard'
 ], function(module) {
 
-	module.controller('dashboardController', ['$scope', function($scope) {
-		
-	}]);
+	module.controller('dashboardController', ['$scope', function($scope) {}]);
 
 });

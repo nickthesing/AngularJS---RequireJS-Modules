@@ -1,4 +1,2 @@
 
-define([
-	'./module'
-], function() {});
+define(['./dashboard'], function() {});

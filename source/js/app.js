@@ -1,25 +1,28 @@
 
 define([
-	'angular', 
-	'./js/dependencyResolverFor',
-	'./js/controllers/index',
-	'./js/services/index',
-	'./js/filters/index',
-	'./js/modules/dashboard/module'
+	'angular',
+	'resolver',
+	'controllers/index',
+	'services/index',
+	'filters/index',
+	'modules/dashboard/dashboard',
+	'modules/profile/profile',
 ], function(angular, dependencyResolverFor) {
 
 	var app = angular.module('app', ['ngRoute', 
-		'app.controllers', 
-		'app.services', 
-		'app.filters', 
-		'app.constants', 
-		'app.dashboard'])
+		'app.controllers',
+		'app.services',
+		'app.filters',
+		'app.constants',
+		'app.dashboard',
+		'app.profile'
+	])
 
-		.config(['$locationProvider', function($locationProvider) {
-		
-			$locationProvider.html5Mode(true);
+	.config(['$locationProvider', function($locationProvider) {
+	
+		$locationProvider.html5Mode(true);
 
-		}]);
+	}]);
 
 	return app;
 

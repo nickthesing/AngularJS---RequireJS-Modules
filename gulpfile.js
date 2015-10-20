@@ -16,17 +16,17 @@ gulp.task('copy', function() {
 			.pipe(gulp.dest('build')),
 
 		gulp.src(['source/views/**/*.html'])
-		 .pipe(gulp.dest('build/views')),
+		 	.pipe(gulp.dest('build/views')),
 
 		// copy config-require
 		gulp.src(['source/js/require-config.js'])
 			.pipe(plumber(errorHandler))
-			.pipe(uglify())
+			//.pipe(uglify())
 			.pipe(gulp.dest('build/js')),
 
 		// copy all angular module js files
 		gulp.src(['source/js/**/*.js', '!source/js/*.js'])
-			.pipe(uglify())
+			//.pipe(uglify())
 			.pipe(gulp.dest('build/js')),
 
 		// copy vendor scripts
@@ -35,7 +35,7 @@ gulp.task('copy', function() {
 
 		gulp.src(['source/vendor/requirejs/require.js'])
 			.pipe(plumber(errorHandler))
-			.pipe(uglify())
+			//.pipe(uglify())
 			.pipe(gulp.dest('build/vendor/requirejs'))
 	);
 });
@@ -45,15 +45,16 @@ gulp.task('js', function() {
 	var ngAnnotate = require('gulp-ng-annotate');
 
 	var config = require('./source/js/require-config.js');
-		config.baseUrl = 'source';
+		config.baseUrl = 'source/js';
+	console.log(config);
 
 	 gulp.src(['source/js/*.js'])
 		.pipe(plumber(errorHandler))
-		.pipe(amdOptimize('js/bootstrap', config))
+		.pipe(amdOptimize('bootstrap', config))
 		.pipe(concat('bootstrap.js'))
-		.pipe(insert.append(';require(["js/bootstrap"]);'))
-		.pipe(ngAnnotate())
-		.pipe(uglify())
+		.pipe(insert.append(';require(["bootstrap"]);'))
+		//.pipe(ngAnnotate())
+		//.pipe(uglify())
 		.pipe(gulp.dest('build/js/'))
 });
 

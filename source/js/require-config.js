@@ -5,12 +5,13 @@ if (typeof define !== 'function') {
 
 define({
 
-	baseUrl: '.',
+	baseUrl: 'js',
 
 	paths: {
-		'angular': 'vendor/angular/angular',
-		'angular-route': 'vendor/angular-route/angular-route.min',
-		'app': 'js/app'
+		'angular': '../vendor/angular/angular',
+		'angular-route': '../vendor/angular-route/angular-route.min',
+		'resolver': 'dependencyResolverFor',
+		'app': 'app'
 	},
 
 	shim: {

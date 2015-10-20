@@ -1,6 +1,6 @@
 
 define([
-	'../module'
+	'../dashboard'
 ], function(app) {
 
 	app.directive('customForm', function() {
