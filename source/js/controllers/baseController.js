@@ -5,10 +5,10 @@ define(['./module'], function(controllers) {
     
     controllers.controller('baseController', baseController); 
 
-    baseController.$inject = ['$scope'];
+    function baseController() {
+    	var vm = this;
 
-    function baseController($scope) {
-		$scope.pageTitle = "AngularJS -- RequireJS - AMD Application - v";
-    	$scope.subTitle = 'subtitle goes here';
+		vm.pageTitle = "AngularJS -- RequireJS - AMD Application - v";
+    	vm.subTitle = 'subtitle goes here';
     }
 });

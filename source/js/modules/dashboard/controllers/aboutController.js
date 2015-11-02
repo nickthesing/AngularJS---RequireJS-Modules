@@ -3,10 +3,10 @@ define([
 	'../dashboard'
 ], function(module) {
 
-	module.controller('aboutController', ['$scope', function($scope) {
+	module.controller('aboutController', aboutController);
 
-		$scope.title = "About Us"
-
-	}]);
-
+	function aboutController() {
+		var vm = this;
+		vm.title = "About Us";
+	}
 });
