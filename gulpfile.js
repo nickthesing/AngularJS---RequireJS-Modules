@@ -69,3 +69,12 @@ gulp.task('serve', function() {
 		logLevel: "debug"
 	});
 });
+
+gulp.task('test', function (done) {
+	var Server = require('karma').Server;
+
+	new Server({
+		configFile: __dirname + '/karma.conf.js',
+		singleRun: true
+	}, done).start();
+});
