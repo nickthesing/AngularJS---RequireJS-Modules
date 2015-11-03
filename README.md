@@ -25,3 +25,11 @@ Creates a folder /build
 <pre> 
   gulp (default)
 </pre>
+
+### Test
+
+Unit testing with Jasmine.
+
+<pre>
+  karma start karma.conf.js
+</pre>
