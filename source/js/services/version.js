@@ -3,14 +3,19 @@ define(['./module'], function(services) {
 
 	'use strict';
 
-	services.service('versionService', [function() {
+	services.factory('versionService', versionService);
 
+	versionService.$inject = ['appValues'];
+
+	function versionService(appValues) {
 		return {
 			msg: 'application version',
-			version: '0.1',
+			version: '0.1.1',
 			status: 200,
-			error: false
+			error: false,
+			getValues: function() {
+				return appValues.versions;
+			}
 		}
-
-	}]);
+	}
 });
