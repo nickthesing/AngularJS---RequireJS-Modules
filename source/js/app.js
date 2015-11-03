@@ -24,8 +24,8 @@ define([
 
 	}])
 
-	.run(function() {
-
+	.run(function($log) {
+		$log.warn('application starting...');
 	});
 
 	return app;

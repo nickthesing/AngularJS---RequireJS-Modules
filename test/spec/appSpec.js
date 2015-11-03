@@ -22,4 +22,25 @@ define([
 				.toHaveBeenCalledWith(true);
 		});
 	});
+
+	describe('Application logger start', function() {
+		
+		var $log;
+
+		beforeEach(function() {
+			module('app', function($provide) {
+				$provide.value('$log', {
+					warn: jasmine.createSpy()
+				});
+			});
+
+			inject(function(_$log_) {
+				$log = _$log_;
+			});
+		});
+
+		it('should start logging service', function() {
+			expect($log.warn).toHaveBeenCalled();
+		});
+	});
 });

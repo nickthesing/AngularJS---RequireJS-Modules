@@ -23,10 +23,9 @@
 </head>
 <body>
 
-	<div class="container" ng-controller="baseController">
-		<h2>{{pageTitle}}</h2>
-		<p>{{subTitle | from}}</p>
-
+	<div class="container" ng-controller="baseController as vm">
+		<h2>{{vm.pageTitle}}</h2>
+		<p>{{vm.subTitle | from}}</p>
 		<hr>
 	</div>
 		
