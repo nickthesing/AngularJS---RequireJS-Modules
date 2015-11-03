@@ -22,7 +22,11 @@ define([
 	
 		$locationProvider.html5Mode(true);
 
-	}]);
+	}])
+
+	.run(function() {
+
+	});
 
 	return app;
 
