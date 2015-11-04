@@ -23,12 +23,23 @@ define([
 		$locationProvider.html5Mode(true);
 
 		$routeProvider.otherwise({redirectTo: '/home'});
+
 	}])
 
-	.run(function($log) {
-		$log.warn('application starting...');
+	.run(function($log, $rootScope) {
+
+		$log.debug('application starting...');
+
+		$rootScope.$on('$locationChangeStart', function(evt, next, prev) {
+			
+			if ( ! $rootScope.isStarted ) {
+
+				$log.debug('application did an expected route change..');
+				$rootScope.isStarted = true;
+			}
+
+			console.log('lfkdjsfldkj');
+		});
 	});
-
 	return app;
-
 });

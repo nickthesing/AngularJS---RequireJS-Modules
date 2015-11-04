@@ -30,17 +30,35 @@ define([
 		beforeEach(function() {
 			module('app', function($provide) {
 				$provide.value('$log', {
-					warn: jasmine.createSpy()
+					debug: jasmine.createSpy()
 				});
 			});
 
-			inject(function(_$log_) {
+			inject(function(_$log_, _$rootScope_) {
 				$log = _$log_;
+				$rootScope = _$rootScope_;
 			});
 		});
 
 		it('should start logging service', function() {
-			expect($log.warn).toHaveBeenCalled();
+
+			expect($log.debug).toHaveBeenCalledWith('application starting...');
+
+			expect($log.debug).toHaveBeenCalled();
+		});
+
+		it('should log only once', function() {
+
+			$rootScope.$digest();
+
+			$rootScope.$broadcast('$locationChangeStart');
+
+			expect($log.debug).toHaveBeenCalledWith('application did an expected route change..');
+		
+			$rootScope.$broadcast('$locationChangeStart');
+
+			expect($rootScope.isStarted).toBeTruthy();
+
 		});
 
 		it('should test routeProvider', function() {
@@ -56,7 +74,6 @@ define([
 			  	expect($location.path()).toBe('/home');
 
 			});
-		
 		}); 
 	});
 });
