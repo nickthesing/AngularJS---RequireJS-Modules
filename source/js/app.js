@@ -38,7 +38,6 @@ define([
 				$rootScope.isStarted = true;
 			}
 
-			console.log('lfkdjsfldkj');
 		});
 	});
 	return app;
