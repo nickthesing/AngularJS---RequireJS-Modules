@@ -14,7 +14,7 @@ requirejs.config({
 
     shim: {
         'angular': {'exports': 'angular'},
-        'angularMocks': {deps: ['angular'], 'exports': 'angular.mock'},
+        'angularMocks': {deps: ['angular']},
         'angular-route': {deps: ['angular']}
     },
 

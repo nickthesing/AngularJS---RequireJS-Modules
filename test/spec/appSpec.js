@@ -1,6 +1,6 @@
 
 define([
-	'angular', 
+	'angular',
 	'app'
 ], function() {
 
@@ -25,7 +25,7 @@ define([
 
 	describe('Application logger start', function() {
 		
-		var $log;
+		var $log, $route, $location, $rootScope;
 
 		beforeEach(function() {
 			module('app', function($provide) {
@@ -42,5 +42,21 @@ define([
 		it('should start logging service', function() {
 			expect($log.warn).toHaveBeenCalled();
 		});
+
+		it('should test routeProvider', function() {
+			inject(function($route, $location, $rootScope, $httpBackend) {
+
+				$httpBackend.expectGET('/views/pages/home.html').respond(200);
+
+			  	expect($route.current).toBeUndefined();
+
+			   	$location.path('/otherwise');
+			   	$rootScope.$digest();
+
+			  	expect($location.path()).toBe('/home');
+
+			});
+		
+		}); 
 	});
 });

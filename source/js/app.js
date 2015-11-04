@@ -18,10 +18,11 @@ define([
 		'app.profile'
 	])
 
-	.config(['$locationProvider', function($locationProvider) {
+	.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 	
 		$locationProvider.html5Mode(true);
 
+		$routeProvider.otherwise({redirectTo: '/home'});
 	}])
 
 	.run(function($log) {
@@ -31,4 +32,3 @@ define([
 	return app;
 
 });
-
